@@ -19,11 +19,6 @@ class _MapScreenState extends State<MapScreen> {
     _controller = ctr;
   }
 
-  @override
-  void initState() {
-    super.initState();
-  }
-
   Future<void> _createIcon() async {
     _controller.animateCamera(CameraUpdate.newLatLngZoom(
       LatLng(30.042997, 30.976759),

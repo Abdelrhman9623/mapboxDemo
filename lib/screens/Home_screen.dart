@@ -18,6 +18,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Location _location = new Location();
   MapboxMapController _controller;
+  @override
+  void initState() {
+    super.initState();
+    _location.hasPermission();
+    _location.requestPermission();
+  }
 
   Future<void> _getMyLocation() async {
     _location.hasPermission();
